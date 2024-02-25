@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Username -->
+        <label for="id_username">Username:</label>
+        <input type="text" id="id_username" name="username" required><br>
+
+        <!-- Password -->
+        <label for="id_password">Password:</label>
+        <input type="password" id="id_password" name="password" required><br>
+
+        <!-- User Type -->
+        <label>User Type:</label><br>
+        <input type="radio" id="customer" name="user_type" value="customer" checked>
+        <label for="customer">Customer</label><br>
+        <input type="radio" id="artisan" name="user_type" value="artisan">
+        <label for="artisan">Artisan</label><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Link to Registration Page -->
+    <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+</body>
+</html>

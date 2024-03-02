@@ -1,11 +1,12 @@
 from django.shortcuts import redirect, render, HttpResponse
 from .models import Customer, Artisan
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login 
+from django.contrib.auth import logout as auth_logout
 
 
 
@@ -25,7 +26,9 @@ def contact(request):
     return render(request,"contact.html")
 
 
-
+def logout(request):
+    auth_logout(request)
+    return redirect('home')  # Redirect to login page after logout
 
 def register(request):
     if request.method == 'POST':
@@ -69,23 +72,25 @@ def login(request):
         username = request.POST['username']
         password = request.POST['password']
         user_type = request.POST.get('user_type')
+        # Authenticate the user based on the selected user type
+        user = None
+        is_artisan = False  # Default value
 
         # Authenticate the user based on the selected user type
         if user_type == 'customer':
             user = authenticate_customer(username, password)
         elif user_type == 'artisan':
             user = authenticate_artisan(username, password)
+            is_artisan=True
         else:
             # Invalid user type, handle the error as needed
             return render(request, 'signin.html', {'error': 'Invalid user type'})
 
         # Check if authentication was successful
         if user:
-            # Redirect the user based on their type
-            if user_type == 'customer':
-                return redirect('home')  # Replace with actual URL name
-            elif user_type == 'artisan':
-                return redirect('home')  # Replace with actual URL name
+            # Redirect all users to the home page
+            auth_login(request,user)
+            return redirect('home')  # Replace with actual URL name for your home page
         else:
             # Authentication failed, handle the error as needed
             return render(request, 'signin.html', {'error': 'Invalid username or password'})

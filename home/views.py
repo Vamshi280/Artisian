@@ -1,14 +1,20 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import User,Customer, Artisan
+from .models import Customer, Artisan
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login 
+
+
+
 
 
 # Create your views here.
 def index(request):
-    context={
-        'variable':'vamshi'
-    }
-    return render(request,'index.html',context) #request template page to render sending the parameter to page
+
+    return render(request,'index.html') #request template page to render sending the parameter to page
     #instead of httpresponse we will render the page
     # return HttpResponse("This is a homepage")
 def about(request):
@@ -16,11 +22,6 @@ def about(request):
 def service(request):
     return render(request,"service.html")
 def contact(request):
-    if request.method =="POST":
-        email=request.POST.get('email')
-        password=request.POST.get('password')
-        User.objects.create(email=email,password=password)
-        return render(request, "index.html")
     return render(request,"contact.html")
 
 
@@ -62,12 +63,55 @@ def register(request):
 
     return render(request, 'signup.html')
 
-
+#login page authintication
 def login(request):
-    return render(request,"signin.html")
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user_type = request.POST.get('user_type')
 
-from django.http import JsonResponse
-from .models import Customer, Artisan
+        # Authenticate the user based on the selected user type
+        if user_type == 'customer':
+            user = authenticate_customer(username, password)
+        elif user_type == 'artisan':
+            user = authenticate_artisan(username, password)
+        else:
+            # Invalid user type, handle the error as needed
+            return render(request, 'signin.html', {'error': 'Invalid user type'})
+
+        # Check if authentication was successful
+        if user:
+            # Redirect the user based on their type
+            if user_type == 'customer':
+                return redirect('home')  # Replace with actual URL name
+            elif user_type == 'artisan':
+                return redirect('home')  # Replace with actual URL name
+        else:
+            # Authentication failed, handle the error as needed
+            return render(request, 'signin.html', {'error': 'Invalid username or password'})
+
+    # Render the login page if it's a GET request or if authentication fails
+    return render(request, 'signin.html')
+
+def authenticate_customer(username, password):
+    try:
+        customer = Customer.objects.get(username=username)
+        if customer.check_password(password):
+            return customer
+    except Customer.DoesNotExist:
+        pass
+    return None
+
+def authenticate_artisan(username, password):
+    try:
+        artisan = Artisan.objects.get(username=username)
+        if artisan.check_password(password):
+            return artisan
+    except Artisan.DoesNotExist:
+        pass
+    return None
+
+
 
 #for checking whether the username exists in database
 def check_username(request):
@@ -82,5 +126,7 @@ def check_username(request):
 
     # Return an empty response if the request method is not POST
     return JsonResponse({})
+
+
 
 

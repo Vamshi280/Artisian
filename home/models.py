@@ -1,10 +1,6 @@
 from django.db import models
-
-# Create your models here.
-class User(models.Model):
-    email = models.EmailField()
-    password = models.CharField(max_length=100)
-
+from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.hashers import check_password
 
 
 class Customer(models.Model):
@@ -16,7 +12,11 @@ class Customer(models.Model):
     address = models.TextField()
     pincode = models.CharField(max_length=10)
     password = models.CharField(max_length=100)
-    # Add other fields for customer details as needed
+
+    def check_password(self, raw_password):
+        return check_password(raw_password, self.password)
+
+
 
 class Artisan(models.Model):
     first_name = models.CharField(max_length=50)
@@ -27,4 +27,6 @@ class Artisan(models.Model):
     address = models.TextField()
     pincode = models.CharField(max_length=10)
     password = models.CharField(max_length=100)
-    # Add other fields for artisan details as needed
+    def check_password(self, raw_password):
+        return check_password(raw_password, self.password)
+

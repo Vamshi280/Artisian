@@ -9,47 +9,61 @@
     {% block extra_head %}{% endblock extra_head %}
   </head>
   <body>
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Artisian</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Artisan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
+              <!-- Products Link -->
               <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                  <a class="nav-link" href="#">Products</a>
               </li>
+              <!-- Account Dropdown -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/service">Profile</i></a></li>
-                  <li><a class="dropdown-item" href="/login">Login</a></li>
-                  <li><a class="dropdown-item" href="/register">Signup</a></li>
-                  <li><a class="dropdown-item" href="#">Orders</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Add item </i></a></li>
-                </ul>
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Account
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/service">Profile</a></li>
+                      {% if user.is_authenticated %}
+                          <!-- Logout Option -->
+                          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                          {% if is_artisan %}
+                              <!-- Add Item Option (Only for Artisans) -->
+                              <li><a class="dropdown-item" href="#">Add Item</a></li>
+                          {% endif %}
+                      {% else %}
+                          <!-- Login and Signup Options -->
+                          <li><a class="dropdown-item" href="/login">Login</a></li>
+                          <li><a class="dropdown-item" href="/register">Signup</a></li>
+                      {% endif %}
+                  </ul>
               </li>
+              <!-- Blogs Link -->
               <li class="nav-item">
-                <a class="nav-link" href="/about">Blogs</a>
+                  <a class="nav-link" href="/about">Blogs</a>
               </li>
+              <!-- Contact Link -->
               <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                  <a class="nav-link" href="/contact">Contact</a>
               </li>
-            </ul>
-            <form class="d-flex" role="search">
+          </ul>
+          <!-- Search Form -->
+          <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-</nav> 
+          </form>
+      </div>
+  </div>
+</nav>
+
 {% block body %}{% endblock body %}
 
 {% comment %} footer {% endcomment %}

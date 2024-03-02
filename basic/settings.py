@@ -155,5 +155,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
+AUTH_USER_MODEL = 'home.Customer'
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import Customer, Artisan
+from .models import Customer, Artisan ,Product
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
@@ -14,8 +14,10 @@ from django.contrib.auth import logout as auth_logout
 
 # Create your views here.
 def index(request):
-
-    return render(request,'index.html') #request template page to render sending the parameter to page
+     # Retrieve all products from the database
+    products=Product.objects.all()
+     # Pass the products to the template
+    return render(request,'index.html',{'products':products}) #request template page to render sending the parameter to page
     #instead of httpresponse we will render the page
     # return HttpResponse("This is a homepage")
 def about(request):
@@ -131,6 +133,10 @@ def check_username(request):
 
     # Return an empty response if the request method is not POST
     return JsonResponse({})
+
+
+
+
 
 
 

@@ -1,153 +1,121 @@
-Hi vamshi
-<div class="container my-3">
-  <h2 class="my-4 text-center">Enjoy the shopping...</h2>
+name:Channapatna Toys Wooden Peg Dolls Family Non Toxic Colors- Set of 4 Wooden Dolls 
+image:img/toy2.webp
+description:✔PRETEND PLAY WOODEN PEG DOLLS: 4 handcrafted gender-neutral wooden peg doll figurines of different skin tones and body types. They are smooth, organic, and just the right size for little hands.
+manufacture:same
+price:449
+category_id=1
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
+
+name:Channapatna Toys Pull Along Toy Wooden Train Set with Animals Peg Dolls with Attached String
+image:img/toy3.webp
+description:✔100% HANDMADE WOODEN TOY FEATURES:Colorful Jungle themed Pull along train set comes with an engine, 2 wagons, 4 animal peg dolls- Monkey, Panda, Penguin and Duck
+manufacture:same
+price:969
+category_id=1
+
+name:Channapatna Toys Wooden Bowling Pins Toy Set for Kids 
+image:img/toy4.webp
+description:100% HANDMADE WOODEN TOYS HANDCRAFTED IN INDIA: Natural High Quality Materials. 100% ivory wood, Eco-friendly materials & bright natural non-toxic, water-based paints, child safe. No plastic. Wooden bowling game set toy for kids are Handmade by our recognised Artisans from Channapatna,INDIA
+manufacture:same
+price:849
+category_id=1
+
+
+name:CHANNAPATNA TOYS traditional Push Wagon Baby Walker for Infants and Toddlers
+image:img/toy5.webp
+description:Making the Child Independent: A simple walking wagon can make your child try walking independently. Independence will add to your little one's confidence and helps boost their self-esteem. When they are a little independent they tend to throw fewer tantrums.
+manufacture:same
+price:2335
+category_id=1
+
+
+name:CHANNAPATNA Two-in-one Early Education Set Bead Maze Toy for Toddlers Montessori Activity 
+image:img/toy6.webp
+description:CHANNAPATNA TOYS Novelty Education Pack: Includes abacus, roller coaster and colorful wooden bead maze, caterpillar twist baby toy. A variety of items and functions and bright colors attract baby's attention, with excellent quality and value-which makes it a best-selling product and a childhood favorite.
+manufacture:same
+price:999
+category_id=1
+
+
+name:Channapatna Toys Wooden Montessori Musical Maraca Rattles & Xylophone Set of 7 
+image:img/toy7.webp
+description:✔SAFE WOODEN TOY-Our wooden toys are handmade from natural ivory wood, natural Eco-friendly water paint, non-toxic, vegetable paint
+manufacture:same
+price:1099
+category_id=1
+
+
+name:Channapatna Toys Handmade Small Sized Wooden Pots with Home Decorative Wooden Wall Hanging 
+image:img/toy8.webp
+description:Channapatna toys takes pride in bringing you handmade wooden toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones.
+manufacture:same
+price:439
+category_id=1
+
+
+name:Channapatna Toys Wooden Kitchen Dollhouse Furniture Set for Kids 
+image:img/toy9.webp
+description:Channapatna toys takes pride in bringing you handmade wooden toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones. 
+manufacture:same
+price:598
+category_id=1
+
+name:CHANNAPATNA TOYS Wooden Mini Desktop Parent-Child for Kids Fun Bowling Game Toy Set
+image:img/toy10.webp
+description:Mini Desktop Gamming Toy -- Bowling game is easy to set up and fun to play. Just stand up the ten mini bowling pins, position the ramp in the desired direction, and then send the ball rolling down little ones. 
+manufacture:same
+price:568
+category_id=1
+
+
+name:Channapatna Toys Wooden Bear Stacking Toy for Kids 
+image:img/toy11.webp
+description:Channapatna toys takes pride in bringing you handmade wooden stacking toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones
+manufacture:same
+price:339
+category_id=1
+
+
+name:CHANNAPATNA TOYS Wooden Indian Flag Russian Nesting Dolls Set for Kids 
+image:img/toy12.webp
+description:WOODEN DOLLS: Kids' nesting dolls are plenty of fun, but did you know they're often used as educational tools? Not only do they require motor skills for assembly, kids can flex their counting and spatial skills while stacking. The dolls also aid in building vocabulary, especially when it comes to learning superlatives and order.
+manufacture:same
+price:599
+category_id=1
+
+name:Channapatna Toys Wooden Russian Nesting Dolls Penguin Set for Kids 
+image:img/toy13.webp
+description:Channapatna toys takes pride in bringing you handmade wooden russian nesting dolls toys on amazon that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little one 
+manufacture:same
+price:548
+category_id=1
+
+
+name:Channapatna Toys Wooden Egg Shakers
+image:img/toy14.webp
+description:SENSORY TOYS-Our rattles are designed to stimulate and develop your baby's vision and hearing. When the wooden rattle is shaked, the impact between the wooden rings makes a quiet and soothing sound. Your child will enjoy playing with them.
+manufacture:same
+price:399
+category_id=1
+
+name:Channapatna Toys Wooden Farmer Couple Dolls Toys 
+image:img/toy15.webp
+description:Can be used as Dussehra Decorative DollsCan be used as a gift OR show piece100% Handmade: Handmade by recognised Artisans from Karnataka proudly handmade & Handcrafted in India: 100% wood with non-toxic and environmental friendly color. 
+manufacture:same
+price:799
+category_id=1
+
+
+
+
+
+
+
+
+
+
+
+
+

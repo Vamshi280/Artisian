@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login 
 from django.contrib.auth import logout as auth_logout
+from django.shortcuts import render, get_object_or_404
 
 
 
@@ -133,6 +134,15 @@ def check_username(request):
 
     # Return an empty response if the request method is not POST
     return JsonResponse({})
+
+
+#creating view of product here
+def view_product(request, product_id):
+    # Retrieve the product from the database
+    product = get_object_or_404(Product, pk=product_id)
+    
+    # Pass the product to the view template
+    return render(request, 'view_product.html', {'product': product})
 
 
 

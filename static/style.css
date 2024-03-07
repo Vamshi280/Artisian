@@ -71,17 +71,22 @@
  
 
 }
-/* .cir{
+.cir{
   padding: 5px;
   border: 1px solid rgb(237, 231, 231);
   border-radius: 50%;
-} */
+}
 .btn-group{
   margin-left: 200x;
 }
 
 
 /* signup and login design */
+.shop {
+color: black;
+text-decoration: none;
+padding: 20px;
+}
 
 
 

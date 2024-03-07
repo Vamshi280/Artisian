@@ -55,7 +55,9 @@
             <div class="btn-group">
               <a href="{% url 'view_product' product.id %}" class="btn btn-sm btn-outline-secondary">View</a>
               <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary cart"><i class="fa-solid fa-cart-shopping"></i></button>
+              <a href="{% url 'add_to_cart' product.id %}" class="btn btn-sm btn-outline-secondary cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
               
             </div>
           </div>

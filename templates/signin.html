@@ -88,6 +88,7 @@
 </head>
 <body>
     <div class="form-box">
+    <div>
     <h2>Login</h2>
     {% if messages %}
     <ul>
@@ -96,6 +97,7 @@
         {% endfor %}
     </ul>
 {% endif %}
+</div>
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <div class="input-field">

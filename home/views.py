@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import Customer, Artisan ,Product
+from .models import Customer, Artisan ,Product,Cart
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
@@ -145,6 +145,27 @@ def view_product(request, product_id):
     
     # Pass the product to the view template
     return render(request, 'view_product.html', {'product': product})
+
+
+# implementing cart
+def view_cart(request):
+    # Retrieve the user's cart
+    cart = Cart.objects.filter(user=request.user).first()
+    return render(request, 'cart.html', {'cart': cart})
+
+def add_to_cart(request, product_id):
+    # Retrieve the user's cart
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    # Add the product to the cart
+    cart.products.add(product_id)
+    return redirect('view_cart')
+
+def remove_from_cart(request, product_id):
+    # Retrieve the user's cart
+    cart = Cart.objects.filter(user=request.user).first()
+    # Remove the product from the cart
+    cart.products.remove(product_id)
+    return redirect('view_cart')
 
 
 

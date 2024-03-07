@@ -57,3 +57,16 @@ class Product(models.Model):
         return self.name
 
 
+class Cart(models.Model):
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product) #many to many relationship between product and cart products
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def add_to_cart(self, product):
+        self.products.add(product)
+
+    def remove_from_cart(self, product):
+        self.products.remove(product)
+
+    def clear_cart(self):
+        self.products.clear()

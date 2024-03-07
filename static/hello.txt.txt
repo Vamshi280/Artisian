@@ -116,6 +116,134 @@ category_id=1
 
 
 
+idiols
+name: Brass Ganesha Statue
+image: img/idol1.jpg
+description:Brass Ganesha Statue, 12 Inch Big Ganesh Figure in Brass, Ganapati Bappa Idol, Lord Vinayaka Murty, Hindu Good Luck God for New Beginnings.
+manufacture:Etsy
+Price:699
+category_id:3
+
+
+name: Lord Vishnu Goddess Laxmi Sculpture
+image: img/idol2.jpg
+description:The moment Lakshmi came out, both demons and gods tried their best to win her. The first Lakshmi saw were some saints and rishis. They stood up and requested Lakshmi to come to them. However, Lakshmi denied by saying that even though the saints are nice, they have a big ego that they are a little above humans as they know the secret to reach the gods.
+manufacture:Etsy
+Price:1299
+category_id:3
+
+
+name: lord Hanuman statue
+image: img/idol3.jpg
+description:Handmade design solid 925 sterling silver India idol lord Hanuman statue, home temple puja art utensils, idol statue sculpture. Metal-solid silver. Item type-Statue/ figurine, height-3.9 cm width-1.7 cm depth-2.5 cm Weight-32.600 grams. stamped-925.
+manufacture:Etsy
+Price:599
+category_id:3
+
+name: Indian Goddess Lakshmi Statue
+image: img/idol4.jpg
+description:Indian Goddess Lakshmi Statue Figurine - 5.3”H Lakshmi Idols Statue Murti Laxmi Staue Home Office Temple Mandir Pooja Item Diwali Gifts Diwali Decoration for Home Spiritual Gift
+manufacture:Etsy
+Price:800
+category_id:3
+
+name: Marble Handmade Flute Krishna Handcrafted
+image: img/idol5.jpg
+description:Elevate your spiritual space and home decor with our exquisite Marble God Idol, a timeless symbol of devotion, beauty, and spirituality. Handcrafted with meticulous attention to detail, this magnificent piece of art captures the divine essence of the chosen deity, radiating a sense of reverence and tranquility
+manufacture:Etsy
+Price:999
+category_id:3
+
+name:Kannamoochi Yenada
+image: img/idol6.jpg
+description:Stream Kannamoochi Yenada by Priya Surendranath on desktop and mobile. Play over 320 million tracks for free on SoundCloud.
+manufacture:Etsy
+Price:809
+category_id:3
+
+name:White Shiva Statue
+image: img/idol7.jpg
+description:White Shiva Statue - Beautiful statue for your home. Statue of Lord Shiv Hindu God / Idol A very intricate detailed white statue of Lord Shiva, the Hindu god / idol known as the creator. A perfect gift for Diwali. Specifications - Size: Height 20cm Width 15cm Depth 11cm
+manufacture:Etsy
+Price:1299
+category_id:3
+
+name: Ganesha Statue
+image: img/idol8.jpg
+description:Ganesha Statue, 68 CM, Brass Swing Lord Ganesh Idol, Hindu God of Good Luck & new beginnings, Elephant Head, Ganpathi Murti Weight:- 14 kg Measurements HEIGHT:- 68 CM / 26.5Inches Width :- 46 CM / 18 Inches Depth :- 14 CM / 5.5 Inches Ganesha, also spelled Ganesh, also called Ganapati
+manufacture:Etsy
+Price:899
+category_id:3
+#
+name: Brass Kamdhenu Cow With Calf show piece
+image: img/idol9.jpg
+description:"What's Included Brass Cow Calf Statue Product Dimensions Height- 16.5 cm/ 6.5 Inches Approx Width- 21.5 cm/ 8.5 Inches Approx Depth- 11 cm/ 4 Inches Approx Weight: 3 kg Approx Product Description Kamadhenu, also known as Surabhi, is a divine bovine-goddess described in vedic scriptures as the mother of all cows.
+manufacture:Etsy
+Price:1099
+category_id:3
+
+name: Anantha Shayanam
+image: img/idol10.jpg
+description:Best online shopping store for latest and antique brass artefacts and wooden panels. Check the latest collections and offers now at India's best online store - Veena Murali Decors
+manufacture:Etsy
+Price:699
+category_id:3
+
+name:Balaji Face Wall Hanging
+image: img/idol11.jpg
+description:The Indian online store for antique styled brass artefacts and wooden crafts. Check out and shop now from the latest collection at the India’s favourite brass decor online store.
+manufacture:Etsy
+Price:799
+category_id:3
+
+name: Statue of shiva nataraja, lord of dance
+image: img/idol12.jpg
+description:Photo about Statue of shiva nataraja, lord of dance, and discover more than 49 Million Professional Stock Photos on Freepik
+manufacture:Etsy
+Price:1019
+category_id:3
+
+name: Brass Murugan Statue Standing
+image: img/idol13.jpg
+description:Brass Murugan Statue Standing, 12"Inch Kartikeya Figure Brass, Karthikeyan Idol in Brass, Kartikey Murty, Lord Batu Malai Sri Murugan Statue, Lord Murugan Statue, Big Murugan Figurine, Brass Karthikeyan, Skanda Shanmukha, Karttikeya Karthik, Subramanya Swamy, Brass Murugan Idol, Big Lord Kartikeyan, Kumara Swamy Murti, Batu Malai Murugana, Kartikey Karthika ji, Silai Murgan Murugar, Subrahmanya Morti
+manufacture:Etsy
+Price:1499
+category_id:3
+#
+name: Lord Ayyappa Brass Statue
+image: img/idol14.jpg
+description:"Measurements- Height -14 inches Width- 8 inches Depth -7 inches weight- 8.2 kg Material - Made of Solid Brass with Turquoise Inlay Handwk. Welcome to the NikurEssence We provide you the wld\"s most unique items f your home & business offices. We deal with decs & furniture. 
+manufacture:Etsy
+Price:699
+category_id:3
+
+name: Small goddess Saraswati with Veena Statue God
+image: img/idol15.jpg
+description:Small goddess Saraswati with Veena Statue God Figurines Hindu Goddess on Lotus O. WELCOME TO MY STORE AND HAPPY SHOPPING! Made Of High Quality Stone. This Statue Has Good Decorative Function And Art Collection Value. Professional Customer Service: If You Have Any Quality Problems, You Can Contact Us Any Time. 
+manufacture:Etsy
+Price:1999
+category_id:3
+
+name: Brass Shiv Parivar Statue, 10 Inch Big Lord Shiva Family Idol, Shiva With Parvati With Baby Ganesh & Murugan
+image: img/idol16.jpg
+description:Weight: 5.500 Kg Approx Measurement: Height- 25 cm / 10 Inches Approx Width- 22 cm / 8.5 Inches Approx Depth- 12 cm / 5 Inches Approx Shiva Parvati Family Statue: Lord Shiva is worshipped in India and is a part of trinity along with Lord Brahma and Lord Vishnu. He is the destroyer of evil. He represents purity and truth. Along with his consort Goddess Parvati, he represents the divine union of consciousness and energy.
+manufacture:Etsy
+Price:1599
+category_id:3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login 
 from django.contrib.auth import logout as auth_logout
 from django.shortcuts import render, get_object_or_404
-
+import random
 
 
 
@@ -16,7 +16,9 @@ from django.shortcuts import render, get_object_or_404
 # Create your views here.
 def index(request):
      # Retrieve all products from the database
-    products=Product.objects.all()
+    products = list(Product.objects.all())
+    #to shuffle the product we use random
+    random.shuffle(products)
      # Pass the products to the template
     return render(request,'index.html',{'products':products}) #request template page to render sending the parameter to page
     #instead of httpresponse we will render the page

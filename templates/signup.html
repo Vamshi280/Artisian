@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,62 +38,178 @@
         }
         
         </script>
+
+
+        <style>
+            body{
+                background-image: url("C:\Users\vamsh\OneDrive\Desktop\Django\basic\static\img\idiol1.webp");
+            }
+            .form-box{
+                width: 400px;
+                height: 85%;
+                border: 2px;
+                position: absolute;
+                backdrop-filter: blur(20px); 
+                margin-left: 40%;
+                margin-top: 5%;
+              } 
+
+            .reg{
+                width: 100%;
+                margin-left: 27%;
+                font-size: 25px;
+            }  
+            
+            .input-field{
+                  position: relative;
+                   width: 100%;
+                   height: 40px;
+                   border-bottom: 2px solid black;
+                   margin: 1px 0;
+            }
+
+            .input-field1{
+                  position: relative;
+                   width: 100%;
+                   height: 60px;
+                   border-bottom: 2px solid black;
+                   margin: 1px 0;
+                  display: inline-block; 
+            }
+
+
+            .input-field div{
+                position: absolute;
+               font-weight: 500;
+               pointer-events: none;
+               transform: translateY(-50%);
+            }
+
+            .input-field input{
+              width: 100%;
+              background-color: transparent;
+              border: none;
+              outline: none;
+            }
+            .bn{
+               width: 100%;
+               height: 40px;
+               margin-top: 3px;
+              background-color: rgb(23, 21, 25);
+               border: none;
+              cursor: pointer;
+              color: white;
+              font-size: 20px;
+              font-weight: 500;
+            }
+           
+
+            .reg-login {
+               text-align: center; 
+               font-size: 20px;
+            }
+
+            .reg-login p a{
+                text-decoration: none;
+                color: rgb(37, 29, 44);
+            }
+
+            .reg-login p a:hover{
+            text-decoration: underline;
+            }
+            
+            .form-box{
+                border: 1px solid rgb(128, 126, 126);
+                padding: 20px;
+            }
+
+              
+        </style>
         
 </head>
 <body>
-    <h2>Sign Up</h2>
+    <div class="form-box">
+     <diV class="reg">
+    <h2>Registration</h2>
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
+    </div>    
         
+        <div class="input-field">
         <!-- First Name -->
-        <label for="id_first_name">First Name:</label>
+        <label for="id_first_name">First Name</label>
         <input type="text" id="id_first_name" name="first_name" required><br>
+        </div>
 
+        <div class="input-field">
         <!-- Last Name -->
-        <label for="id_last_name">Last Name:</label>
+        <label for="id_last_name">Last Name</label>
         <input type="text" id="id_last_name" name="last_name" required><br>
+        </div>
 
+        <div class="input-field">
         <!-- Username -->
-        <label for="id_username">Username:</label>
+        <label for="id_username">Username</label>
         <input type="text" id="id_username" name="username" required onchange="checkUsername()"><br>
         <span id="username-error" style="color: red;"></span><br>
+        </div>
 
+        <div class="input-field">
         <!-- Phone Number -->
-        <label for="id_phone_number">Phone Number:</label>
+        <label for="id_phone_number">Phone Number</label>
         <input type="text" id="id_phone_number" name="phone_number" required><br>
+        </div>
 
+        <div class="input-field">
         <!-- Email Address -->
-        <label for="id_email">Email:</label>
+        <label for="id_email">Email</label>
         <input type="email" id="id_email" name="email" required><br>
+        </div>
 
+        <div class="input-field">
         <!-- Address -->
-        <label for="id_address">Address:</label>
-        <textarea id="id_address" name="address" required></textarea><br>
+        <label for="id_address">Address</label>
+        <!-- <textarea id="id_address" name="address" required></textarea><br> -->
+        </div>
 
+        <div class="input-field">
         <!-- Pin Code -->
-        <label for="id_pincode">Pin Code:</label>
+        <label for="id_pincode">Pin Code</label>
         <input type="text" id="id_pincode" name="pincode" required><br>
+        </div>
 
+        <div class="input-field1">
         <!-- User Type (Radio Buttons) -->
-        <label>User Type:</label><br>
+        <label>User Type</label><br>
         <input type="radio" id="customer" name="user_type" value="customer" checked>
         <label for="customer">Customer</label><br>
         <input type="radio" id="artisan" name="user_type" value="artisan">
         <label for="artisan">Artisan</label><br>
+        </div>
 
+        <div class="input-field">
         <!-- Password -->
-        <label for="id_password">Password:</label>
+        <label for="id_password">Password</label>
         <input type="password" id="id_password" name="password" required><br>
+        </div>
 
+        <div class="input-field">
         <!-- Confirm Password -->
-        <label for="id_confirm_password">Confirm Password:</label>
+        <label for="id_confirm_password">Confirm Password</label>
         <input type="password" id="id_confirm_password" name="confirm_password" required><br>
+        </div>
 
+    
         <!-- Submit Button -->
-        <button type="submit">Sign Up</button>
+        <button class="bn" type="submit">Register</button>
     </form>
 
-    <!-- Link to Login Page -->
-    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    <div class="reg-login">
+        <!-- Link to Login Page -->
+    <p>Existing User? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</div>
+
 </body>
 </html>
+

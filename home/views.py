@@ -153,6 +153,8 @@ def view_cart(request):
     cart = Cart.objects.filter(user=request.user).first()
     return render(request, 'cart.html', {'cart': cart})
 
+#when user is not logged in if he press login button it will redirect to login page
+@login_required
 def add_to_cart(request, product_id):
     # Retrieve the user's cart
     cart, created = Cart.objects.get_or_create(user=request.user)

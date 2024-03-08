@@ -3,7 +3,10 @@
 {% block title %}Cart{% endblock title %}
 {% block extra_head %}{% endblock extra_head %}
 {% block body %}
-
+<br>
+<a href="/" class="btn btn-success "style="color:white"><i class="fa-solid fa-arrow-left" ></i>&nbsp;Continue shopping</a>
+<br>
+<br>
 <div class="row">
   <div class="col-lg-11">
       {% if cart %}
@@ -14,7 +17,7 @@
                           <div class="d-flex justify-content-between">
                               <div class="d-flex flex-row align-items-center">
                                   <div>
-                                      <img src="{% static product.image %}" class="img-fluid rounded-3" alt="{{ product.name }}" style="width: 65px;">
+                                      <img src="{% static product.image %}" class="img-fluid rounded-3" alt="{{ product.name }}" style="width: 150px; height:150px">
                                   </div>
                                   <div class="ms-3">
                                       <h5>{{ product.name }}</h5>
@@ -33,14 +36,14 @@
               {% endfor %}
           </ul>
           <!-- Add Place Order button -->
-          <a href="{% url 'place_order' %}" class="btn btn-primary">Place Order</a>
+          <a href="{% url 'place_order' %}" class="btn btn-primary" style="margin-left:50%">Place Order</a>
       {% else %}
           <p>Your cart is empty.</p>
       {% endif %}
   </div>
   <!-- Remaining HTML code -->
 </div>
-<a href="/" class="shop"><i class="fa-solid fa-arrow-left"></i>&nbsp;Continue shopping</a>
+
 
 
 {% endblock body %}

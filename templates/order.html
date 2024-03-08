@@ -1,8 +1,7 @@
 {% extends "base.html" %}
-{% load static %}
 {% block title %}Order{% endblock title %}
 {% block body %}
-
+{% load static %}
 <div class="container">
     <h1>Order</h1>
     {% if product %}
@@ -14,16 +13,17 @@
             <div class="col-md-9">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
-                    {% comment %} <p class="card-text">Description: {{ product.description }}</p> {% endcomment %}
                     <p class="card-text">Manufacturer: {{ product.manufacturer }}</p>
                     <p class="card-text">Price: {{ product.price }}</p>
                     <p><b>Shipping Address:</b> {{ request.user.address }}</p>
                     <p><b>Payment Method:</b> Cash On Delivery</p>
+                    <form action="{% url 'place_order' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Confirm Order</button>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <a href="#" class="btn btn-primary">Confirm Order</a>
     </div>
     {% else %}
     {% if cart %}
@@ -51,8 +51,10 @@
                 <p><b>Total Price:</b> {{ cart.calculate_total_price }}</p>
                 <p><b>Shipping Address:</b> {{ request.user.address }}</p>
                 <p><b>Payment Method:</b> Cash On Delivery</p>
-                
-                <a href="#" class="btn btn-primary">Confirm Order</a>
+                <form action="{% url 'place_order' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Confirm Order</button>
+                </form>
             </div>
         </div>
     </div>

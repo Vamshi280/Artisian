@@ -171,18 +171,43 @@ def remove_from_cart(request, product_id):
     return redirect('view_cart')
 
 
-#order page
 @login_required
 def place_order(request):
-    # Retrieve the user's cart
-    cart = Cart.objects.filter(user=request.user).first()
-    return render(request, 'order.html', {'cart': cart})
+    if request.method == 'POST':
+        # Retrieve the user's cart
+        cart = Cart.objects.filter(user=request.user).first()
+        if cart:
+            # Process the order and save it to the database
+            # Create the order
+            order = Order.objects.create(
+                user=request.user,
+                total_price=cart.calculate_total_price(),
+                address=request.user.address
+            )
+            # Add products from cart to the order
+            order.products.add(*cart.products.all())
+            # Clear the cart
+            cart.clear_cart()
+            # Redirect to the order confirmation page
+            return redirect('order_confirmation', order_id=order.id)
+    else:
+        # Display the order page with cart items
+        cart = Cart.objects.filter(user=request.user).first()
+        return render(request, 'order.html', {'cart': cart})
 
 @login_required
-#from home page
 def order_from_home(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     return render(request, 'order.html', {'product': product})
+
+def order_confirmation(request, order_id):
+    order = Order.objects.get(id=order_id)
+    # Fetch products with price information
+    products = order.products.all()
+    # Calculate the total price based on individual product prices
+    total_price = sum(product.price for product in products)
+    return render(request, 'order_confirmation.html', {'order': order, 'total_price': total_price})
+
 
 
 

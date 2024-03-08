@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import Customer, Artisan ,Product,Cart
+from .models import Customer, Artisan ,Product,Cart,Order
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout as auth_logout
 from django.shortcuts import render, get_object_or_404
 import random
+
 
 
 
@@ -168,6 +169,20 @@ def remove_from_cart(request, product_id):
     # Remove the product from the cart
     cart.products.remove(product_id)
     return redirect('view_cart')
+
+
+#order page
+@login_required
+def place_order(request):
+    # Retrieve the user's cart
+    cart = Cart.objects.filter(user=request.user).first()
+    return render(request, 'order.html', {'cart': cart})
+
+@login_required
+#from home page
+def order_from_home(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, 'order.html', {'product': product})
 
 
 

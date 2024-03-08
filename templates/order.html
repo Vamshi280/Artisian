@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Order{% endblock title %}
+{% block body %}
+
+<div class="container">
+    <h1>Order</h1>
+    {% if product %}
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-3">
+                <img src="{% static product.image %}" class="img-fluid rounded-start small-image" alt="{{ product.name }}">
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    {% comment %} <p class="card-text">Description: {{ product.description }}</p> {% endcomment %}
+                    <p class="card-text">Manufacturer: {{ product.manufacturer }}</p>
+                    <p class="card-text">Price: {{ product.price }}</p>
+                    <p><b>Shipping Address:</b> {{ request.user.address }}</p>
+                    <p><b>Payment Method:</b> Cash On Delivery</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-primary">Confirm Order</a>
+    </div>
+    {% else %}
+    {% if cart %}
+    <div class="card mb-3">
+        <h2 class="card-header">Order Summary</h2>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for product in cart.products.all %}
+                <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="{% static product.image %}" class="img-fluid rounded small-image" alt="{{ product.name }}">
+                        </div>
+                        <div class="col-md-9">
+                            <h5>{{ product.name }}</h5>
+                            <p class="mb-0">Manufacturer: {{ product.manufacturer }}</p>
+                            <p class="mb-0">Price: {{ product.price }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="mt-3">
+                <p><b>Total Products:</b> {{ cart.products.count }}</p>
+                <p><b>Total Price:</b> {{ cart.calculate_total_price }}</p>
+                <p><b>Shipping Address:</b> {{ request.user.address }}</p>
+                <p><b>Payment Method:</b> Cash On Delivery</p>
+                
+                <a href="#" class="btn btn-primary">Confirm Order</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p>Your cart is empty.</p>
+    {% endif %}
+    {% endif %}
+</div>
+{% endblock body %}

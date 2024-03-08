@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.hashers import check_password
+from django.contrib.auth import get_user_model
+from django.utils import timezone
 
 
 
@@ -70,3 +72,20 @@ class Cart(models.Model):
 
     def clear_cart(self):
         self.products.clear()
+    def calculate_total_price(self):
+        total_price = sum(product.price for product in self.products.all())
+        return total_price
+
+
+
+
+#order table
+class Order(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+    address = models.TextField(null=True) 
+
+    def __str__(self):
+        return f"Order {self.id} by {self.user.username}"

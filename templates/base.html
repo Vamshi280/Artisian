@@ -36,7 +36,7 @@
                       Account
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/service">Profile</a></li>
+                      {% comment %} <li><a class="dropdown-item" href="/service">Profile</a></li> {% endcomment %}
                       {% if user.is_authenticated %}
                           <!-- Logout Option -->
                           <li><a class="dropdown-item" href="/cart">Cart</a></li>

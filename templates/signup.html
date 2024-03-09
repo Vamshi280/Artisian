@@ -1,216 +1,92 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Home{% endblock title %}
-{% block extra_head %}{% endblock extra_head %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'signupinstyle.css' %}"> 
+{% endblock extra_head %}
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <script>
-        function checkUsername() {
-            var username = document.getElementById('id_username').value;
-            console.log('Checking username:', username);
-        
-            // Get the CSRF token from the form
-            var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-        
-            // Make an AJAX request to your Django view to check if the username exists
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/check_username/', true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            
-            // Set the CSRF token in the request headers
-            xhr.setRequestHeader('X-CSRFToken', csrftoken);
-        
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.exists) {
-                        // Username exists, display an error message
-                        document.getElementById('username-error').innerText = 'Username already exists.';
-                    } else {
-                        // Username is unique, clear the error message
-                        document.getElementById('username-error').innerText = '';
-                    }
-                }
-            };
-            xhr.send(JSON.stringify({ username: username }));
-        }
-        
-        </script>
 
+<div class="container">
+    <div class="row">
 
-        <style>
+        <!-- Right Column with Registration Form -->
+        <div class="col-md-6">
+            <div class="form-box">
+                <h2>Create Account</h2>
+                <form action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Input Fields for Registration -->
+                    <!-- First Name -->
+                    <div class="input-field">
+                        <input type="text" id="id_first_name" name="first_name" placeholder="First Name" required><br>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="input-field">
+                        <input type="text" id="id_last_name" name="last_name" placeholder="Last Name" required><br>
+                    </div>
+                    <!-- Other Input Fields (Username, Phone Number, Email, Address, Pin Code, User Type, Password, Confirm Password) -->
+                    <!-- Add your input fields here -->
+                    <div class="input-field">
+                        <!-- Username -->
+                        
+                        <input type="text" id="id_username" name="username" placeholder="User Name" required ><br>
+                        <span id="username-error" style="color: red;"></span><br>
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Phone Number -->
+                        <input type="text" id="id_phone_number" name="phone_number" placeholder="Phone Number"required><br>
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Email Address -->
+                        <input type="email" id="id_email" name="email"placeholder="Email" required><br>
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Address -->
+                
+                      <textarea id="id_address" name="address" placeholder="Address" required></textarea><br> 
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Pin Code -->
+                        <input type="text" id="id_pincode" name="pincode" placeholder="Pin Code" required><br>
+                        </div>
+                
+                        <div class="input-field1">
+                        <!-- User Type (Radio Buttons) -->
+                        {% comment %} <label>User Type</label><br> {% endcomment %}
+                        <input type="radio" id="customer" name="user_type" value="customer" checked>
+                        <label for="customer">Customer</label><br>
+                        <input type="radio" id="artisan" name="user_type" value="artisan">
+                        <label for="artisan">Artisan</label><br>
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Password -->
+                
+                        <input type="password" id="id_password" name="password" placeholder="Password"  required><br>
+                        </div>
+                
+                        <div class="input-field">
+                        <!-- Confirm Password -->
+                        <input type="password" id="id_confirm_password" name="confirm_password" placeholder="confirm password"  required><br>
+                        </div>
+                
 
-            .form-box{
-                width: 400px;
-                height: 85%;
-                border: 2px;
-                position: absolute;
-                backdrop-filter: blur(20px); 
-                margin-left: 40%;
-                margin-top: 5%;
-              } 
-
-            .reg{
-                width: 100%;
-                margin-left: 27%;
-                font-size: 25px;
-            }  
-            
-            .input-field{
-                  position: relative;
-                   width: 100%;
-                   height: 40px;
-                   border-bottom: 2px solid black;
-                   margin: 1px 0;
-            }
-
-            .input-field1{
-                  position: relative;
-                   width: 100%;
-                   height: 60px;
-                   border-bottom: 2px solid black;
-                   margin: 1px 0;
-                  display: inline-block; 
-            }
-
-
-            .input-field div{
-                position: absolute;
-               font-weight: 500;
-               pointer-events: none;
-               transform: translateY(-50%);
-            }
-
-            .input-field input{
-              width: 100%;
-              background-color: transparent;
-              border: none;
-              outline: none;
-            }
-            .bn{
-               width: 100%;
-               height: 40px;
-               margin-top: 3px;
-              background-color: rgb(23, 21, 25);
-               border: none;
-              cursor: pointer;
-              color: white;
-              font-size: 20px;
-              font-weight: 500;
-            }
-           
-
-            .reg-login {
-               text-align: center; 
-               font-size: 20px;
-            }
-
-            .reg-login p a{
-                text-decoration: none;
-                color: rgb(37, 29, 44);
-            }
-
-            .reg-login p a:hover{
-            text-decoration: underline;
-            }
-            
-            .form-box{
-                border: 1px solid rgb(128, 126, 126);
-                padding: 20px;
-            }
-
-              
-        </style>
-        
-</head>
-<body>
-    <div class="form-box">
-     <diV class="reg">
-    <h2>Registration</h2>
-    <form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-    </div>    
-        
-        <div class="input-field">
-        <!-- First Name -->
-        <label for="id_first_name">First Name</label>
-        <input type="text" id="id_first_name" name="first_name" required><br>
+                    <!-- Submit Button -->
+                    <button class="bn" type="submit">Register</button>
+                </form>
+                <div class="reg-login">
+                    <!-- Link to Login Page -->
+                    <br>
+                    <p>Existing User? <a href="{% url 'login' %}">Login</a></p>
+                </div>
+            </div>
         </div>
-
-        <div class="input-field">
-        <!-- Last Name -->
-        <label for="id_last_name">Last Name</label>
-        <input type="text" id="id_last_name" name="last_name" required><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Username -->
-        <label for="id_username">Username</label>
-        <input type="text" id="id_username" name="username" required onchange="checkUsername()"><br>
-        <span id="username-error" style="color: red;"></span><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Phone Number -->
-        <label for="id_phone_number">Phone Number</label>
-        <input type="text" id="id_phone_number" name="phone_number" required><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Email Address -->
-        <label for="id_email">Email</label>
-        <input type="email" id="id_email" name="email" required><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Address -->
-        <label for="id_address">Address</label>
-      <textarea id="id_address" name="address" required></textarea><br> 
-        </div>
-
-        <div class="input-field">
-        <!-- Pin Code -->
-        <label for="id_pincode">Pin Code</label>
-        <input type="text" id="id_pincode" name="pincode" required><br>
-        </div>
-
-        <div class="input-field1">
-        <!-- User Type (Radio Buttons) -->
-        <label>User Type</label><br>
-        <input type="radio" id="customer" name="user_type" value="customer" checked>
-        <label for="customer">Customer</label><br>
-        <input type="radio" id="artisan" name="user_type" value="artisan">
-        <label for="artisan">Artisan</label><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Password -->
-        <label for="id_password">Password</label>
-        <input type="password" id="id_password" name="password" required><br>
-        </div>
-
-        <div class="input-field">
-        <!-- Confirm Password -->
-        <label for="id_confirm_password">Confirm Password</label>
-        <input type="password" id="id_confirm_password" name="confirm_password" required><br>
-        </div>
-
-    
-        <!-- Submit Button -->
-        <button class="bn" type="submit">Register</button>
-    </form>
-
-    <div class="reg-login">
-        <!-- Link to Login Page -->
-    <p>Existing User? <a href="{% url 'login' %}">Login</a></p>
     </div>
 </div>
 
-</body>
-</html>
 {% endblock body %}

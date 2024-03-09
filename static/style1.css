@@ -22,16 +22,15 @@
   .category-list li a {
     text-decoration: none;
     text-transform: capitalize;
-    color: #333;
+    color: #575555;
     font-weight: bold;
    
   }
-  /* .category-list li a:hover {
+  .category-list li a:hover {
     text-decoration: underline;
-    margin-left: 5px;
-    color: #333;
-    font-weight: bold;
-  } */
+    color: #000000;
+
+  }
   
   /* Product Section Styles */
   .product-container {

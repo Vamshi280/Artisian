@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import Customer, Artisan ,Product,Cart,Order,Category
+from .models import Customer, Artisan ,Product,Cart,Order,Category,UserQuery
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
@@ -24,8 +24,8 @@ def index(request):
     return render(request,'index.html',{'products':products}) #request template page to render sending the parameter to page
     #instead of httpresponse we will render the page
     # return HttpResponse("This is a homepage")
-def about(request):
-    return render(request,"about.html")
+def blogs(request):
+    return render(request,"blog.html")
 def service(request):
     return render(request,"service.html")
 def contact(request):
@@ -221,7 +221,22 @@ def product(request):
     return render(request, 'product.html', {'categories': categories, 'products': products})
 
 
+def submit_query(request):
+    if request.method == 'POST':
+        username = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        
+        # Create a new UserQuery object and save it to the database
+        query = UserQuery.objects.create(username=username, email=email, subject=subject, message=message)
+        query.save()
 
+        # You can also add additional logic here, like sending an email notification
+        
+        return redirect('home')  # Redirect to a success page after submission
+    else:
+        return render(request, 'contact.html')
 
 
 

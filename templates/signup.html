@@ -1,5 +1,8 @@
-
-
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block extra_head %}{% endblock extra_head %}
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,9 +44,7 @@
 
 
         <style>
-            body{
-                background-image: url("C:\Users\vamsh\OneDrive\Desktop\Django\basic\static\img\idiol1.webp");
-            }
+
             .form-box{
                 width: 400px;
                 height: 85%;
@@ -212,4 +213,4 @@
 
 </body>
 </html>
-
+{% endblock body %}

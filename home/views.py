@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .models import Customer, Artisan ,Product,Cart,Order
+from .models import Customer, Artisan ,Product,Cart,Order,Category
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login as auth_login 
 from django.http import JsonResponse
@@ -208,6 +208,17 @@ def order_confirmation(request, order_id):
     total_price = sum(product.price for product in products)
     return render(request, 'order_confirmation.html', {'order': order, 'total_price': total_price})
 
+
+
+#creting produvt category wise page
+def product(request):
+    categories = Category.objects.all()
+    selected_category = request.GET.get('category')
+    if selected_category:
+        products = Product.objects.filter(category__name=selected_category)
+    else:
+        products = Product.objects.all()
+    return render(request, 'product.html', {'categories': categories, 'products': products})
 
 
 

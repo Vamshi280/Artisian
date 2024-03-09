@@ -2,4 +2,98 @@
     max-height: 650px; /* Adjust this value as needed */
     object-fit: cover;
 }
+.bg-cl{
+    background-color: rgb(0, 40, 40,0.9);
+}
+.fact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
+.fact-image {
+    width: 40%; /* Adjust as needed */
+    max-width: 350px; /* Adjust as needed */
+    margin-right: 20px;
+}
+
+.fact-info {
+    width: 60%; /* Adjust as needed */
+}
+
+.fact-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.fact-description {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+}
+.factt {
+   margin: 30px;
+   text-align: center;
+}
+
+/* blog page */
+#founders .container {
+    padding-top: 50px;
+}
+
+#founders h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.founder {
+    text-align: center;
+}
+
+.founder img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; /* Make the image round */
+    margin-bottom: 15px;
+}
+
+.founder-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.founder-role {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+
+/* #conformation page */
+.confirmation-box {
+    width: 100%;
+    margin: 2% auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #faf4f4;
+    margin-bottom: 0;
+}
+
+.confirmation-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.confirmation-box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

@@ -237,6 +237,13 @@ def submit_query(request):
         return redirect('home')  # Redirect to a success page after submission
     else:
         return render(request, 'contact.html')
+    
+
+# my order pages
+def my_orders(request):
+    # Retrieve orders for the current user (assuming you have implemented authentication)
+    orders = Order.objects.filter(user=request.user)
+    return render(request, 'orders.html', {'orders': orders})
 
 
 

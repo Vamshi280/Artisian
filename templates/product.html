@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Products{% endblock title %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+{% endblock extra_head %}
+{% block body %}
+<!-- Category Section -->
+<div class="category-box">
+    {% comment %} <h3>Categorys</h3> {% endcomment %}
+    <ul class="category-list">
+        <li><a href="?">All</a></li>
+        {% for category in categories %}
+            <li><a href="?category={{ category.name }}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- Product Section -->
+<div class="product-container">
+    {% for product in products %}
+    <div class="product-box">
+        <img src="{% static product.image %}" alt="{{ product.name }}" class="product-image">
+        <div class="product-details">
+            <p><b>{{ product.name }}</b><p>
+            {% comment %} <p>{{ product.description }}</p> {% endcomment %}
+            <p>Price: {{ product.price }}</p>
+            <a href="{% url 'view_product' product.id %}" class="btn btn-success bt">View</a>
+            <a href="{% url 'add_to_cart' product.id %}" class="add-to-cart-btn"style="text-decoration: none;">
+                Add To Cart
+              </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock body %}

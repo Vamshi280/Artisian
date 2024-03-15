@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'signupinstyle.css' %}"> 
+{% endblock extra_head %}
+{% block body %}
+    <div class="form-box1">
+    <div>
     <h2>Login</h2>
     {% if messages %}
     <ul>
@@ -14,29 +15,34 @@
         {% endfor %}
     </ul>
 {% endif %}
+</div>
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
-        
+        <div class="input-field2">
         <!-- Username -->
-        <label for="id_username">Username:</label>
-        <input type="text" id="id_username" name="username" required><br>
+        <input type="text" id="id_username" name="username" placeholder="Username" required><br>
+        </div>
 
+        <div class="input-field2">
         <!-- Password -->
-        <label for="id_password">Password:</label>
-        <input type="password" id="id_password" name="password" required><br>
+        <input type="password" id="id_password" name="password" placeholder="password" required><br>
+        </div>
 
+        <div class="input-field3">
         <!-- User Type -->
-        <label>User Type:</label><br>
         <input type="radio" id="customer" name="user_type" value="customer" checked>
         <label for="customer">Customer</label><br>
         <input type="radio" id="artisan" name="user_type" value="artisan">
         <label for="artisan">Artisan</label><br>
+        </div>
 
         <!-- Submit Button -->
-        <button type="submit">Login</button>
+        <button class="bn" type="submit">Login</button>
     </form>
-
+    <div class="reg-login">
     <!-- Link to Registration Page -->
-    <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
-</body>
-</html>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+</div>
+
+{% endblock body %}

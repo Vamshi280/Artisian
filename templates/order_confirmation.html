@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Order Confirmation{% endblock title %}
+{% block extra_head %} <link rel="stylesheet" type="text/css" href="{% static 'blogstyle.css' %}"> {% endblock extra_head %}
+{% block body %}
+<div class="confirmation-box">
+    <h1>Order Confirmation</h1>
+    <p>Your order has been placed successfully!</p>
+    <p>Order ID: {{ order.id }}</p>
+    <!-- Display total price -->
+    <p>Total Price: {{ total_price }}</p>
+    <!-- Add more details about the order if needed -->
+</div>
+
+{% endblock body %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Order Confirmation{% endblock title %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'blogstyle.css' %}">
+{% endblock extra_head %}
+{% block body %}
+<div class="container">
+    <h1>My Orders</h1>
+    {% for order in orders %}
+    <div class="confirmation-box">
+        <h2>Order ID: {{ order.id }}</h2>
+        <p>Your order has been placed successfully!</p>
+        <ul>
+            {% for item in order.order_items.all %}
+            
+            <!-- Add more details about the order item if needed -->
+            {% endfor %}
+        </ul>
+        <!-- Display total price -->
+        <p>Total Price: {{ order.total_price }}</p>
+        <p>Your order will be placed within two days</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}

@@ -1,6 +1,96 @@
-.container{
-    margin: 10px;
+.image-container {
+    height: 200px; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+.card-img {
+    width: 100%; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
 }
-h2{
-    color: red;
+.card .card-img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
 }
+.image-container {
+    height: 300px; /* Adjust the height as needed */
+  }
+
+/* Product Details Section Styles */
+/* Product Details Section Styles */
+
+
+/* Product Details Section Styles */
+.product-details {
+  padding: 50px 0;
+ 
+}
+
+.product-details img {
+  max-width: 100%;
+  height: 500px;
+  /* object-fit: cover; */
+  /* border: 1px solid rgb(228, 221, 221); */
+  border-radius: 5%;
+  
+}
+
+.product-details h2 {
+  color: #333;
+}
+
+.product-details p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-details label {
+  margin-right: 10px;
+}
+
+.product-details .buttons button {
+  margin-right: 10px;
+}
+
+.product-details .buttons button:last-child {
+  margin-right: 0;
+}
+
+.product-details .buttons a {
+  margin-right: 10px;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.product-details h3 {
+  margin-top:20px;
+ 
+
+}
+.cir{
+  padding: 5px;
+  border: 1px solid rgb(237, 231, 231);
+  border-radius: 50%;
+}
+.btn-group{
+  margin-left: 200x;
+}
+
+
+/* signup and login design */
+.shop {
+color: white;
+text-decoration: none;
+padding: 5px;
+}
+
+
+
+
+
+
+

@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Home{% endblock title %}
+{% block extra_head %}{% endblock extra_head %}
 {% block body %}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
 
 
 
@@ -32,158 +34,40 @@
 </div>
 
 
- <div class="container my-3">
-  <h2 class="my-4 text-center">Enjoy the shopping...</h2>
+<div class="container my-3">
+  <h2 class="my-4 text-center">Find your product....</h2>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
+  
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+      {% for product in products %}
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="image-container">
+            <img src="{% static product.image %}" class="card-img-top" alt="{{ product.name }}">
+          </div>
+          <div class="card-body" style="height: 200px; overflow: hidden;">
+            <p class="card-title mb-0"><b>{{ product.name }}</b></p> <br>
+            <p class="card-text mb-1">Manufacturer: <b> {{ product.manufacturer }}</b></p>
+            <p class="card-text">Price: <b><i class="fa-solid fa-indian-rupee-sign"></i>{{ product.price }}</b></p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-end">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+              <a href="{% url 'view_product' product.id %}" class="btn btn-sm btn-outline-secondary">View</a>
+              <a href="{% url 'order_from_home' product_id=product.id %}" class="btn btn-sm btn-outline-secondary">order</a>
+              <a href="{% url 'add_to_cart' product.id %}" class="btn btn-sm btn-outline-secondary cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+              
             </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
           </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
-</div> 
+  
+
 {% endblock body %}
 
 

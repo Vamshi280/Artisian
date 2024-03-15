@@ -1,153 +1,271 @@
-Hi vamshi
-<div class="container my-3">
-  <h2 class="my-4 text-center">Enjoy the shopping...</h2>
+name:Channapatna Toys Wooden Peg Dolls Family Non Toxic Colors- Set of 4 Wooden Dolls 
+image:img/toy2.webp
+description:✔PRETEND PLAY WOODEN PEG DOLLS: 4 handcrafted gender-neutral wooden peg doll figurines of different skin tones and body types. They are smooth, organic, and just the right size for little hands.
+manufacture:same
+price:449
+category_id=1
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/ch3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/p3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="card-body">
-          <p>Manufacture : Chanapatana Art and Craft</p>
-          <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i>500</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-            </div>
-            {% comment %} <small class="text-body-secondary">9 mins</small> {% endcomment %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
+
+name:Channapatna Toys Pull Along Toy Wooden Train Set with Animals Peg Dolls with Attached String
+image:img/toy3.webp
+description:✔100% HANDMADE WOODEN TOY FEATURES:Colorful Jungle themed Pull along train set comes with an engine, 2 wagons, 4 animal peg dolls- Monkey, Panda, Penguin and Duck
+manufacture:same
+price:969
+category_id=1
+
+name:Channapatna Toys Wooden Bowling Pins Toy Set for Kids 
+image:img/toy4.webp
+description:100% HANDMADE WOODEN TOYS HANDCRAFTED IN INDIA: Natural High Quality Materials. 100% ivory wood, Eco-friendly materials & bright natural non-toxic, water-based paints, child safe. No plastic. Wooden bowling game set toy for kids are Handmade by our recognised Artisans from Channapatna,INDIA
+manufacture:same
+price:849
+category_id=1
+
+
+name:CHANNAPATNA TOYS traditional Push Wagon Baby Walker for Infants and Toddlers
+image:img/toy5.webp
+description:Making the Child Independent: A simple walking wagon can make your child try walking independently. Independence will add to your little one's confidence and helps boost their self-esteem. When they are a little independent they tend to throw fewer tantrums.
+manufacture:same
+price:2335
+category_id=1
+
+
+name:CHANNAPATNA Two-in-one Early Education Set Bead Maze Toy for Toddlers Montessori Activity 
+image:img/toy6.webp
+description:CHANNAPATNA TOYS Novelty Education Pack: Includes abacus, roller coaster and colorful wooden bead maze, caterpillar twist baby toy. A variety of items and functions and bright colors attract baby's attention, with excellent quality and value-which makes it a best-selling product and a childhood favorite.
+manufacture:same
+price:999
+category_id=1
+
+
+name:Channapatna Toys Wooden Montessori Musical Maraca Rattles & Xylophone Set of 7 
+image:img/toy7.webp
+description:✔SAFE WOODEN TOY-Our wooden toys are handmade from natural ivory wood, natural Eco-friendly water paint, non-toxic, vegetable paint
+manufacture:same
+price:1099
+category_id=1
+
+
+name:Channapatna Toys Handmade Small Sized Wooden Pots with Home Decorative Wooden Wall Hanging 
+image:img/toy8.webp
+description:Channapatna toys takes pride in bringing you handmade wooden toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones.
+manufacture:same
+price:439
+category_id=1
+
+
+name:Channapatna Toys Wooden Kitchen Dollhouse Furniture Set for Kids 
+image:img/toy9.webp
+description:Channapatna toys takes pride in bringing you handmade wooden toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones. 
+manufacture:same
+price:598
+category_id=1
+
+name:CHANNAPATNA TOYS Wooden Mini Desktop Parent-Child for Kids Fun Bowling Game Toy Set
+image:img/toy10.webp
+description:Mini Desktop Gamming Toy -- Bowling game is easy to set up and fun to play. Just stand up the ten mini bowling pins, position the ramp in the desired direction, and then send the ball rolling down little ones. 
+manufacture:same
+price:568
+category_id=1
+
+
+name:Channapatna Toys Wooden Bear Stacking Toy for Kids 
+image:img/toy11.webp
+description:Channapatna toys takes pride in bringing you handmade wooden stacking toys that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little ones
+manufacture:same
+price:339
+category_id=1
+
+
+name:CHANNAPATNA TOYS Wooden Indian Flag Russian Nesting Dolls Set for Kids 
+image:img/toy12.webp
+description:WOODEN DOLLS: Kids' nesting dolls are plenty of fun, but did you know they're often used as educational tools? Not only do they require motor skills for assembly, kids can flex their counting and spatial skills while stacking. The dolls also aid in building vocabulary, especially when it comes to learning superlatives and order.
+manufacture:same
+price:599
+category_id=1
+
+name:Channapatna Toys Wooden Russian Nesting Dolls Penguin Set for Kids 
+image:img/toy13.webp
+description:Channapatna toys takes pride in bringing you handmade wooden russian nesting dolls toys on amazon that are 100% safe, free from toxic paints, plastics and batteries so that your child can have fun in the healthiest possible way! We have re-invented the traditional Indian wooden toys to provide the perfect amalgamation of older wisdom and modern needs for your little one 
+manufacture:same
+price:548
+category_id=1
+
+
+name:Channapatna Toys Wooden Egg Shakers
+image:img/toy14.webp
+description:SENSORY TOYS-Our rattles are designed to stimulate and develop your baby's vision and hearing. When the wooden rattle is shaked, the impact between the wooden rings makes a quiet and soothing sound. Your child will enjoy playing with them.
+manufacture:same
+price:399
+category_id=1
+
+name:Channapatna Toys Wooden Farmer Couple Dolls Toys 
+image:img/toy15.webp
+description:Can be used as Dussehra Decorative DollsCan be used as a gift OR show piece100% Handmade: Handmade by recognised Artisans from Karnataka proudly handmade & Handcrafted in India: 100% wood with non-toxic and environmental friendly color. 
+manufacture:same
+price:799
+category_id=1
+
+
+
+
+
+
+
+
+
+
+idiols
+name: Brass Ganesha Statue
+image: img/idol1.jpg
+description:Brass Ganesha Statue, 12 Inch Big Ganesh Figure in Brass, Ganapati Bappa Idol, Lord Vinayaka Murty, Hindu Good Luck God for New Beginnings.
+manufacture:Etsy
+Price:699
+category_id:3
+
+
+name: Lord Vishnu Goddess Laxmi Sculpture
+image: img/idol2.jpg
+description:The moment Lakshmi came out, both demons and gods tried their best to win her. The first Lakshmi saw were some saints and rishis. They stood up and requested Lakshmi to come to them. However, Lakshmi denied by saying that even though the saints are nice, they have a big ego that they are a little above humans as they know the secret to reach the gods.
+manufacture:Etsy
+Price:1299
+category_id:3
+
+
+name: lord Hanuman statue
+image: img/idol3.jpg
+description:Handmade design solid 925 sterling silver India idol lord Hanuman statue, home temple puja art utensils, idol statue sculpture. Metal-solid silver. Item type-Statue/ figurine, height-3.9 cm width-1.7 cm depth-2.5 cm Weight-32.600 grams. stamped-925.
+manufacture:Etsy
+Price:599
+category_id:3
+
+name: Indian Goddess Lakshmi Statue
+image: img/idol4.jpg
+description:Indian Goddess Lakshmi Statue Figurine - 5.3”H Lakshmi Idols Statue Murti Laxmi Staue Home Office Temple Mandir Pooja Item Diwali Gifts Diwali Decoration for Home Spiritual Gift
+manufacture:Etsy
+Price:800
+category_id:3
+
+name: Marble Handmade Flute Krishna Handcrafted
+image: img/idol5.jpg
+description:Elevate your spiritual space and home decor with our exquisite Marble God Idol, a timeless symbol of devotion, beauty, and spirituality. Handcrafted with meticulous attention to detail, this magnificent piece of art captures the divine essence of the chosen deity, radiating a sense of reverence and tranquility
+manufacture:Etsy
+Price:999
+category_id:3
+
+name:Kannamoochi Yenada
+image: img/idol6.jpg
+description:Stream Kannamoochi Yenada by Priya Surendranath on desktop and mobile. Play over 320 million tracks for free on SoundCloud.
+manufacture:Etsy
+Price:809
+category_id:3
+
+name:White Shiva Statue
+image: img/idol7.jpg
+description:White Shiva Statue - Beautiful statue for your home. Statue of Lord Shiv Hindu God / Idol A very intricate detailed white statue of Lord Shiva, the Hindu god / idol known as the creator. A perfect gift for Diwali. Specifications - Size: Height 20cm Width 15cm Depth 11cm
+manufacture:Etsy
+Price:1299
+category_id:3
+
+name: Ganesha Statue
+image: img/idol8.jpg
+description:Ganesha Statue, 68 CM, Brass Swing Lord Ganesh Idol, Hindu God of Good Luck & new beginnings, Elephant Head, Ganpathi Murti Weight:- 14 kg Measurements HEIGHT:- 68 CM / 26.5Inches Width :- 46 CM / 18 Inches Depth :- 14 CM / 5.5 Inches Ganesha, also spelled Ganesh, also called Ganapati
+manufacture:Etsy
+Price:899
+category_id:3
+#
+name: Brass Kamdhenu Cow With Calf show piece
+image: img/idol9.jpg
+description:"What's Included Brass Cow Calf Statue Product Dimensions Height- 16.5 cm/ 6.5 Inches Approx Width- 21.5 cm/ 8.5 Inches Approx Depth- 11 cm/ 4 Inches Approx Weight: 3 kg Approx Product Description Kamadhenu, also known as Surabhi, is a divine bovine-goddess described in vedic scriptures as the mother of all cows.
+manufacture:Etsy
+Price:1099
+category_id:3
+
+name: Anantha Shayanam
+image: img/idol10.jpg
+description:Best online shopping store for latest and antique brass artefacts and wooden panels. Check the latest collections and offers now at India's best online store - Veena Murali Decors
+manufacture:Etsy
+Price:699
+category_id:3
+
+name:Balaji Face Wall Hanging
+image: img/idol11.jpg
+description:The Indian online store for antique styled brass artefacts and wooden crafts. Check out and shop now from the latest collection at the India’s favourite brass decor online store.
+manufacture:Etsy
+Price:799
+category_id:3
+
+name: Statue of shiva nataraja, lord of dance
+image: img/idol12.jpg
+description:Photo about Statue of shiva nataraja, lord of dance, and discover more than 49 Million Professional Stock Photos on Freepik
+manufacture:Etsy
+Price:1019
+category_id:3
+
+name: Brass Murugan Statue Standing
+image: img/idol13.jpg
+description:Brass Murugan Statue Standing, 12"Inch Kartikeya Figure Brass, Karthikeyan Idol in Brass, Kartikey Murty, Lord Batu Malai Sri Murugan Statue, Lord Murugan Statue, Big Murugan Figurine, Brass Karthikeyan, Skanda Shanmukha, Karttikeya Karthik, Subramanya Swamy, Brass Murugan Idol, Big Lord Kartikeyan, Kumara Swamy Murti, Batu Malai Murugana, Kartikey Karthika ji, Silai Murgan Murugar, Subrahmanya Morti
+manufacture:Etsy
+Price:1499
+category_id:3
+#
+name: Lord Ayyappa Brass Statue
+image: img/idol14.jpg
+description:"Measurements- Height -14 inches Width- 8 inches Depth -7 inches weight- 8.2 kg Material - Made of Solid Brass with Turquoise Inlay Handwk. Welcome to the NikurEssence We provide you the wld\"s most unique items f your home & business offices. We deal with decs & furniture. 
+manufacture:Etsy
+Price:699
+category_id:3
+
+name: Small goddess Saraswati with Veena Statue God
+image: img/idol15.jpg
+description:Small goddess Saraswati with Veena Statue God Figurines Hindu Goddess on Lotus O. WELCOME TO MY STORE AND HAPPY SHOPPING! Made Of High Quality Stone. This Statue Has Good Decorative Function And Art Collection Value. Professional Customer Service: If You Have Any Quality Problems, You Can Contact Us Any Time. 
+manufacture:Etsy
+Price:1999
+category_id:3
+
+name: Brass Shiv Parivar Statue, 10 Inch Big Lord Shiva Family Idol, Shiva With Parvati With Baby Ganesh & Murugan
+image: img/idol16.jpg
+description:Weight: 5.500 Kg Approx Measurement: Height- 25 cm / 10 Inches Approx Width- 22 cm / 8.5 Inches Approx Depth- 12 cm / 5 Inches Approx Shiva Parvati Family Statue: Lord Shiva is worshipped in India and is a part of trinity along with Lord Brahma and Lord Vishnu. He is the destroyer of evil. He represents purity and truth. Along with his consort Goddess Parvati, he represents the divine union of consciousness and energy.
+manufacture:Etsy
+Price:1599
+category_id:3
+
+
+
+
+class="btn btn-success"'
+
+
+2	home decoration
+3	idols
+4	Sling and tote bag
+1	toy
+
+Kate and Laurel Lintz Large Modern Octagon Floating Wall Shelves with Metal Frame	Modern design with a glamorous edge and lots of functionality best describe the Lintz Octagon Floating Wall Shelves. The large octagon shape of these floating shelves creates a sturdy frame which is made of a strong metal with a striking gold finish and ...	Artdigest	1689.00	img/hdecor10.webp	2
+Keane Weathered Natural Wood curated on LTK	Shop Keane Weathered Natural Wood … and other curated products on LTK, the easiest way to shop everything from your favorite creators	Artdigest	879.00	img/hdecor11.jpg	2
+Delia Shelf	Mango wood, aluminum, mother of pearl* Due to the handcrafted nature of this item, expect slight variation in the appearance of each unique piece* Hanging hardware required* Wipe clean with a soft, dry cloth* Some assembly required	Artdigest	989.00	img/hdecor12.jpg	2
+Brass Kamdhenu Cow With Calf show piece	Whats Included Brass Cow Calf Statue Product Dimensions Height- 16.5 cm/ 6.5 Inches Approx Width- 21.5 cm/ 8.5 Inches Approx Depth- 11 cm/ 4 Inches Approx Weight: 3 kg Approx Product Description Kamadhenu, also known as Surabhi, is a divine bovine-goddes...	Etsy	1099.00	img/idol9.jpg	3
+
+
+class="add-to-cart-btn"
+
+ As per Guinness Book World Records, the world’s most expensive saree (Kancheepuram Silk Saree) was sold for  Rs 39,31,627 on 5th January 2008 made by Chennai Silks, India. Astonishing !!!!
+
+1)Madhubani art
+
+Madhubani paintings were first created at Mithila, the birthplace of Hindu goddess Sita. When Sita and her husband Prince Rama were to be married, King Janak, father to Sita, asked for paintings to capture moments of the marriage. Madhubani painting (or Mithila painting)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

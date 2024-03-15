@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block extra_head %}{% endblock extra_head %}
+{% block body %}
+
+{% comment %} <section class="product-details">
+    <div class="container">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-6">
+                <img src="{% static 'img/toy1.webp' %}" class="img-fluid" alt="Product Image">
+            </div>
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <h2>Product Name</h2>
+                <p>Price: $100</p>
+                <p>Manufacturer: ABC Company</p>
+                <p>Quantity: 10</p>
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-success">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Description -->
+        <div class="row mt-4">
+            <div class="col">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium orci vel elit lobortis, id sollicitudin libero bibendum. Nulla tincidunt nunc nec augue consectetur, eu sodales ex luctus.</p>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<div class="container my-3 product-details">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static product.image %}" class="img-fluid" alt="{{ product.name }}">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ product.name }}</h2>
+            <p><b>Manufacturer: {{ product.manufacturer }}</b></p>
+            <p>Price:&nbsp;<i class="fa-solid fa-indian-rupee-sign"></i> &nbsp;{{ product.price }}</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <div class="buttons mt-3">
+                <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary" style="color:white">
+                    Add to Cart</a>
+                    <a href="{% url 'order_from_home' product_id=product.id %}" class="btn btn-success" style="color:white">Order</a>
+
+                <div class="mt-3">
+                    <span>Share:</span>
+                    <a href="#"><i class="fab fa-facebook-f cir"></i></a>
+                    <a href="#"><i class="fab fa-twitter cir"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp cir"></i></a>
+                    <a href="#"><i class="fas fa-envelope cir"></i></a>
+                    <a href="#"><i class="far fa-copy cir"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Description</h3>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

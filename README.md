@@ -23,3 +23,6 @@ Set up MySQL database and configure database settings in Django settings file.
 Run migrations to create database tables: python manage.py migrate.
 Start the Django development server: python manage.py runserver.
 Access the website via the provided URL.
+
+![WhatsApp Image 2024-09-22 at 21 10 17_ee642279](https://github.com/user-attachments/assets/5e42464a-d53b-4928-9d6d-d5f0dcbf502a)
+

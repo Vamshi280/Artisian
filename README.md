@@ -47,4 +47,4 @@ Access the website via the provided URL.
 
 ![WhatsApp Image 2024-09-22 at 21 10 15_83485055](https://github.com/user-attachments/assets/cf9524dc-51cb-49f3-9062-2723209f51d3)   ![WhatsApp Image 2024-09-22 at 21 10 15_bbc79fb5](https://github.com/user-attachments/assets/d38249e6-b83d-46a8-98f4-58d381259a41)
 
----------------------------------------------------------------------Blog Page 
+---------------------------------------------------------------------Blog Pag
